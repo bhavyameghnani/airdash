@@ -11,10 +11,10 @@ import Link from '@material-ui/core/Link';
 
 const sections = [
   { title: 'Home', url: '#/' },
+  { title: 'Digital Vault', url: '#/vault' },
   { title: 'Shop Marketplace', url: '#/shop' },
   { title: 'Points and Rewards', url: '#/rewards' },
   { title: 'Podcast & E-Books', url: '#/podcast' },
-  { title: 'Digital Vault', url: '#/vault' },
   { title: 'Dashboard', url: '#/dashboard' },
 ];
 
