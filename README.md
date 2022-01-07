@@ -1,4 +1,4 @@
-# JackTheHack - Air-DASH
+# Air-DASH
 
 An AI based solution for giving a hassle free experience to travelers at the airport.
 
