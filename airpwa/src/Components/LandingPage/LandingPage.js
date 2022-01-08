@@ -23,13 +23,15 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Stepss from '../Viz/Stepss';
 
+import PositionedSnackbar from '../Viz/SnackNotification';
+
 export default function Home() {
   const classes = useStyles();
 
   const [show, setShow] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
-  function handleShow(){
+  function handleShow() {
     setShow(show => !show);
   }
 
@@ -58,82 +60,83 @@ export default function Home() {
   return (
     <React.Fragment>
       <CssBaseline />
-        <Container maxWidth="lg">
-          <Header title="AIR DASH" />
-          <main>
-            <MainFeaturedPost post={mainFeaturedPost} />
-            <Container className={classes.cardGrid} maxWidth="lg">
-                <br/><br/>
-              <Grid container spacing={3}>
-                {dashboardStats.map((paper) => (
-                  <Grid item key={paper.title} xs={6} sm={6}>
-                    <Paper elevation={0} className={classes.paper}>
-                      <Grid>
-                        <img alt="icon" src={paper.icon} className={classes.icon} />
-                      </Grid>
-                      <Typography variant='body1' className={classes.divHeading}>
-                        {paper.title}
-                      </Typography>
-                    </Paper>
-                  </Grid>
-                ))}
-              </Grid>
-              <br/>
-              <br/>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleShow}
-              >
-                <b>Open/Close Camera</b>
-              </Button>
-              <br/>
-              <br/>
-              {show && 
+      <Container maxWidth="lg">
+        <Header title="AIR DASH" />
+        <main>
+          <MainFeaturedPost post={mainFeaturedPost} />
+          <Container className={classes.cardGrid} maxWidth="lg">
+            <br /><br />
+            <Grid container spacing={3}>
+              {dashboardStats.map((paper) => (
+                <Grid item key={paper.title} xs={6} sm={6}>
+                  <Paper elevation={0} className={classes.paper}>
+                    <Grid>
+                      <img alt="icon" src={paper.icon} className={classes.icon} />
+                    </Grid>
+                    <Typography variant='body1' className={classes.divHeading}>
+                      {paper.title}
+                    </Typography>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
+            <br />
+            <br />
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleShow}
+            >
+              <b>Open/Close Camera</b>
+            </Button>
+            <br />
+            <br />
+            {show &&
               <>
-              <QRCodeScanner />
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleClickOpen}
-              >
-                <b>Capture</b>
-              </Button>
-              </> }
+                <QRCodeScanner />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleClickOpen}
+                >
+                  <b>Capture</b>
+                </Button>
+              </>}
 
-              <Dialog
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-              >
-                <DialogTitle id="alert-dialog-title">
-                  {"Digital Face ID"}
-                </DialogTitle>
-                <DialogContent>
-                  <DialogContentText id="alert-dialog-description">
-                    Welcome on-board Darshan!
-                    Face ID Contactless check-INs & validations on safety rules will assist you at various checkpoints 
-                  </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                  <Button onClick={handleClose}>Cancel</Button>
-                  <Button onClick={handleClose} autoFocus>
-                    Log in
-                  </Button>
-                </DialogActions>
-              </Dialog>
-              <h1>Get Along</h1>
-            <center> 
+            <Dialog
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">
+                {"Digital Face ID"}
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                  Welcome on-board Darshan!
+                  Face ID Contactless check-INs & validations on safety rules will assist you at various checkpoints
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose}>Cancel</Button>
+                <Button onClick={handleClose} autoFocus>
+                  Log in
+                </Button>
+              </DialogActions>
+            </Dialog>
+            <h1>Get Along</h1>
+            <center>
               <Stepss />
-              </center>
-            </Container>
-          </main>
-          <hr />
-         
-          
-        </Container>
-        <br />
+            </center>
+          </Container>
+        </main>
+        <hr />
+
+        <PositionedSnackbar />
+
+      </Container>
+      <br />
     </React.Fragment>
   );
 }
@@ -143,7 +146,7 @@ const mainFeaturedPost = {
   title: 'AIR DASH',
   description:
     "Digital Ally for Seamless Hours. Building Digital Airport and enhancing Customer onboarding experience with personalised shop marketplace offerings across all the airports.",
-    image: "http://cdn.shopify.com/s/files/1/0061/7735/7891/articles/airplanes-actuators_17389e9d-f144-4f38-8d51-f8632a63c39c_1200x1200.jpg?v=1585138977",
+  image: "http://cdn.shopify.com/s/files/1/0061/7735/7891/articles/airplanes-actuators_17389e9d-f144-4f38-8d51-f8632a63c39c_1200x1200.jpg?v=1585138977",
   imgText: 'main image description',
   linkText: 'Continue reading…'
 };

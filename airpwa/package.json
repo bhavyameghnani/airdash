@@ -5,14 +5,17 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
     "axios": "^0.21.1",
-    "react-hot-toast": "^2.0.0",
-    "react-router-dom": "^5.2.0",
+    "material-ui-notifications": "^0.1.4",
+    "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.0.0",
+    "react-qr-scanner": "^1.0.0-alpha.7",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.0",
     "recharts": "^2.1.4",
     "web-vitals": "^0.2.4",
@@ -27,8 +30,7 @@
     "workbox-range-requests": "^5.1.4",
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4",
-    "react-qr-scanner": "^1.0.0-alpha.7"
+    "workbox-streams": "^5.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
