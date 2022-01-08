@@ -24,12 +24,14 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Stepss from '../Viz/Stepss';
 
 import PositionedSnackbar from '../Viz/SnackNotification';
+import StepsArrivals from '../Viz/StepsArrivals';
 
 export default function Home() {
   const classes = useStyles();
 
   const [show, setShow] = React.useState(false);
   const [open, setOpen] = React.useState(false);
+  const [toggle, setToggle] = React.useState(0)
 
   function handleShow() {
     setShow(show => !show);
@@ -65,11 +67,10 @@ export default function Home() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Container className={classes.cardGrid} maxWidth="lg">
-            <br /><br />
             <Grid container spacing={3}>
               {dashboardStats.map((paper) => (
-                <Grid item key={paper.title} xs={6} sm={6}>
-                  <Paper elevation={0} className={classes.paper}>
+                <Grid item key={paper.title} xs={6} sm={6} >
+                  <Paper elevation={0} className={classes.paper} onClick={()=> {setToggle(paper.value)}}>
                     <Grid>
                       <img alt="icon" src={paper.icon} className={classes.icon} />
                     </Grid>
@@ -81,7 +82,7 @@ export default function Home() {
               ))}
             </Grid>
             <br />
-            <br />
+            
             <Button
               variant="contained"
               color="primary"
@@ -89,7 +90,7 @@ export default function Home() {
             >
               <b>Open/Close Camera</b>
             </Button>
-            <br />
+           
             <br />
             {show &&
               <>
@@ -127,7 +128,7 @@ export default function Home() {
             </Dialog>
             <h1>Get Along</h1>
             <center>
-              <Stepss />
+              {toggle === 0 ? <Stepss /> : <StepsArrivals/> }
             </center>
           </Container>
         </main>
@@ -156,10 +157,11 @@ const dashboardStats = [
   {
     title: 'Departure',
     icon: "https://www.araxos-airport.com/wp-content/uploads/slider18/departures-3.png",
+    value: 0
   },
   {
     title: 'Arrivals',
-    value: '1',
+    value: 1,
     icon: "http://www.i2clipart.com/cliparts/c/9/7/e/clipart-arrivals-pictogram-256x256-c97e.png",
   },
 ];

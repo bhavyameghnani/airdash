@@ -10,49 +10,25 @@ import Typography from '@material-ui/core/Typography';
 
 const steps = [
   {
-    label: 'Digital Face ID',
-    description: `Generate your face id if not done already.`,
+    label: 'Get RTPCR at Airport',
+    description: `Its mandatory to test for covid'19`,
   },
   {
-    label: 'Digi Vault',
+    label: 'Baggage Collection',
     description:
-      'Upload your vital documents',
+      'Collect your Baggage at Counter 3',
   },
   {
-    label: 'Travel check-list',
-    description: `View all instructions for your travel`,
-  },
-  {
-    label: 'Travel to airport',
-    description: `View all public transport options or book a cab / parking lot`,
-  },
-  {
-    label: 'Contactless self check-in',
-    description: `Validate your Digital Face ID`,
-  },
-  {
-    label: 'Auto-generate of Boarding Pass',
-    description: `Boarding pass will be auto-generated and available on Digi Vault`,
-  },
-  {
-    label: 'Counter no. 3 for Security check-in',
-    description: `Air Dash mobile apps users have a dedicated security counter`,
-  },
-  {
-    label: 'Shop Marketplace',
-    description: `Exclusive discount offers on food & gift options`,
-  },
-  {
-    label: 'Augmented Reality Maps',
-    description: `Use Augmented Reality Maps to vist any shops or counter`,
+    label: 'Book your bus ticket to Banglore city',
+    description: `View all public transport options or book a cab`,
   },
   {
     label: 'Have a safe journey',
-    description: `You are all set! Sit back and enjoy the flight`,
+    description: `Welcome to Banglore`,
   },
 ];
 
-export default function VerticalLinearStepper() {
+export default function StepsArrivals() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -72,7 +48,7 @@ export default function VerticalLinearStepper() {
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
-            <StepLabel
+             <StepLabel
               optional={
                 index === 10 ? (
                   <Typography variant="caption">Last step</Typography>
