@@ -8,6 +8,7 @@ import Rewards from './Components/Rewards/Rewards';
 import Podcast from './Components/Podcast/Podcast';
 import Dashboard from './Components/Dashboard/Dashboard';
 import DigitalVault from './Components/DigitalVault/DigitalVault';
+import AboutBIAL from './Components/About/AboutBIAL';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/podcast" component={Podcast}/>
             <Route exact path="/vault" component={DigitalVault}/>
             <Route exact path="/dashboard" component={Dashboard}/>
+            <Route exact path="/bialInfo" component={AboutBIAL}/>
           </Switch>
       </HashRouter>
       {/* </header> */}

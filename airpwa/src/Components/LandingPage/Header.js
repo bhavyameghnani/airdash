@@ -16,6 +16,7 @@ const sections = [
   { title: 'Points and Rewards', url: '#/rewards' },
   { title: 'Podcast & E-Books', url: '#/podcast' },
   { title: 'Dashboard', url: '#/dashboard' },
+  { title: 'About BIAL', url: '#/bialInfo' },
 ];
 
 const useStyles = makeStyles((theme) => ({
