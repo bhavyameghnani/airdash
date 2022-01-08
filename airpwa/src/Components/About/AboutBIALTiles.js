@@ -136,7 +136,7 @@ export default function PodcastTiles() {
                             align="center"
                             fullWidth
                           >
-                          <a href={card.readmore} target="_blank">Start Now</a>
+                          <a href={card.readmore} target="_blank">Visit site</a>
                       </Button>
                      
                       
@@ -154,7 +154,7 @@ export default function PodcastTiles() {
                 <b>Digitally Enabling Travelers</b>
               </Typography>
               <Typography variant="body1" className={classes.desc}>
-              Read Quick shorts & Podcast
+              Read more about Banglore
             </Typography>
 
               <Dialog
@@ -208,12 +208,12 @@ export default function PodcastTiles() {
       readmore: "https://www.treebo.com/blog/bangalore-is-famous-for/"
     },
     {
-      title: 'Home Cooking',
+      title: 'Corporate Social Responsibility',
       description:
-      'All you need to know about Cooking Strokes when you are travelling alone',
-      image: 'https://c.ndtvimg.com/2020-05/tpj5o4f8_cooking-_625x300_02_May_20.jpg',
+      'BIAL is committed to being a responsible corporate entity, sensitive to the environment and community at large. ',
+      image: 'https://manavrachna.edu.in/wp-content/uploads/2016/08/EV7C8379-1024x725-1024x585.jpg',
       imageText: 'Artists name',
-      readmore: "Under your desk, raise both legs at once upwards, and slowly lower them down. Repeat few times."
+      readmore: "https://www.bengaluruairport.com/corporate/csr.html"
     },
   
   

@@ -13,7 +13,7 @@ export default function AboutBIAL() {
       <React.Fragment>
         <CssBaseline />     
          <Container maxWidth="lg">
-          <Header title="Podcasts & E-Books" />
+          <Header title="About BIAL" />
           <main>
             <MainFeaturedPost post={mainFeaturedPost} />
             <Grid container spacing={2} align="center">
@@ -30,7 +30,7 @@ const mainFeaturedPost = {
   title: 'Learn more about BIAL',
   description:
     "Learn & Know more about the initiatives undertaken by Kempegowda International Airport Bengaluru",
-  image: 'https://res.cloudinary.com/practicaldev/image/fetch/s--njJhFTbZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/7jx6pks25uwbu20tcs20.gif',
+  image: 'https://images.newindianexpress.com/uploads/user/imagelibrary/2020/8/31/w900X450/Call_for_creativity.jpg?w=400&dpr=2.6',
   imgText: 'Employee Profile',
   linkText: 'Continue reading…',
 };

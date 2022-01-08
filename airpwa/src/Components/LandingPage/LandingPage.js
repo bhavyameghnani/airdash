@@ -14,7 +14,7 @@ import Avatar from '@material-ui/core/Avatar';
 import FaceIcon from '@material-ui/icons/Face';
 import Paper from '@material-ui/core/Paper';
 import toast from 'react-hot-toast';
-import QRCodeScanner from '../QRCodeScanner/QRCodeScanner';
+
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -29,18 +29,13 @@ import StepsArrivals from '../Viz/StepsArrivals';
 export default function Home() {
   const classes = useStyles();
 
-  const [show, setShow] = React.useState(false);
+  
   const [open, setOpen] = React.useState(false);
   const [toggle, setToggle] = React.useState(0)
 
-  function handleShow() {
-    setShow(show => !show);
-  }
+  
 
-  const handleClickOpen = () => {
-    setOpen(true);
-    setShow(show => !show);
-  };
+  
 
   const handleClose = () => {
     setOpen(false);
@@ -83,49 +78,6 @@ export default function Home() {
             </Grid>
             <br />
             
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={handleShow}
-            >
-              <b>Open/Close Camera</b>
-            </Button>
-           
-            <br />
-            {show &&
-              <>
-                <QRCodeScanner />
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={handleClickOpen}
-                >
-                  <b>Capture</b>
-                </Button>
-              </>}
-
-            <Dialog
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="alert-dialog-title"
-              aria-describedby="alert-dialog-description"
-            >
-              <DialogTitle id="alert-dialog-title">
-                {"Digital Face ID"}
-              </DialogTitle>
-              <DialogContent>
-                <DialogContentText id="alert-dialog-description">
-                  Welcome on-board Darshan!
-                  Face ID Contactless check-INs & validations on safety rules will assist you at various checkpoints
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={handleClose}>Cancel</Button>
-                <Button onClick={handleClose} autoFocus>
-                  Log in
-                </Button>
-              </DialogActions>
-            </Dialog>
             <h1>Get Along</h1>
             <center>
               {toggle === 0 ? <Stepss /> : <StepsArrivals/> }
