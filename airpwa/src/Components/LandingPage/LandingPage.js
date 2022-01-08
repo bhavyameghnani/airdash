@@ -123,11 +123,15 @@ export default function Home() {
                   </Button>
                 </DialogActions>
               </Dialog>
+              <h1>Get Along</h1>
+            <center> 
+              <Stepss />
+              </center>
             </Container>
           </main>
           <hr />
-          <h1>Get Along</h1>
-          <Stepss />
+         
+          
         </Container>
         <br />
     </React.Fragment>
@@ -147,13 +151,13 @@ const mainFeaturedPost = {
 
 const dashboardStats = [
   {
-    title: 'Travel Checklist',
-    icon: "https://cdn.iconscout.com/icon/premium/png-256-thumb/verification-1681052-1428000.png",
+    title: 'Departure',
+    icon: "https://www.araxos-airport.com/wp-content/uploads/slider18/departures-3.png",
   },
   {
-    title: 'Medical Guidelines',
+    title: 'Arrivals',
     value: '1',
-    icon: "https://cdn.iconscout.com/icon/free/png-512/medical-127-129383.png",
+    icon: "http://www.i2clipart.com/cliparts/c/9/7/e/clipart-arrivals-pictogram-256x256-c97e.png",
   },
 ];
 
