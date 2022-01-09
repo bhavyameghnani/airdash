@@ -190,7 +190,7 @@ export default function ShopTiles() {
 
                     {/* {localStorage.getItem("f_readmore")}
                     <br /> <br /> */}
-                    <center><img alt="fitness tip" src={localStorage.getItem("f_image")} /></center>
+                    <center><img alt="fitness tip" height="300px" width= "300px" src={localStorage.getItem("f_image")} /></center>
 
                   </DialogContentText>
 

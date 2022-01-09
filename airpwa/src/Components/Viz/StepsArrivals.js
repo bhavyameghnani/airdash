@@ -7,24 +7,29 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 const steps = [
   {
     label: 'Get RTPCR at Airport',
     description: `Its mandatory to test for covid'19`,
+    url: '#/vault'
   },
   {
     label: 'Baggage Collection',
     description:
       'Collect your Baggage at Counter 3',
+      url: '#/news'
   },
   {
     label: 'Book your bus ticket to Banglore city',
     description: `View all public transport options or book a cab`,
+    url: '#/bialInfo'
   },
   {
     label: 'Have a safe journey',
     description: `Welcome to Banglore`,
+    url: '#/'
   },
 ];
 
@@ -50,7 +55,7 @@ export default function StepsArrivals() {
           <Step key={step.label}>
              <StepLabel
               optional={
-                index === 10 ? (
+                index === 3 ? (
                   <Typography variant="caption">Last step</Typography>
                 ) : null
               }
@@ -60,8 +65,16 @@ export default function StepsArrivals() {
             <StepContent>
               <Typography>{step.description}</Typography>
               <br/>
+              <Link color="inherit"
+                 noWrap
+                variant="body2"
+                href={step.url}
+                >
+              Click here</Link>
               <Box sx={{ mb: 2 }}>
                 <div>
+                
+                <br/>
                   <Button
                     variant="contained"
                     onClick={handleNext}

@@ -9,6 +9,7 @@ import Podcast from './Components/Podcast/Podcast';
 import Dashboard from './Components/Dashboard/Dashboard';
 import DigitalVault from './Components/DigitalVault/DigitalVault';
 import AboutBIAL from './Components/About/AboutBIAL';
+import News from './Components/News/News';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/vault" component={DigitalVault}/>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route exact path="/bialInfo" component={AboutBIAL}/>
+            <Route exact path="/news" component={News}/>
           </Switch>
       </HashRouter>
       {/* </header> */}

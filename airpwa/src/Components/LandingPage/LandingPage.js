@@ -24,6 +24,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Stepss from '../Viz/Stepss';
 
 import PositionedSnackbar from '../Viz/SnackNotification';
+import PositionedSnackbar_1 from '../Viz/SnackNotification_1';
 import StepsArrivals from '../Viz/StepsArrivals';
 
 export default function Home() {
@@ -59,9 +60,16 @@ export default function Home() {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="AIR DASH" />
+       
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
+          <PositionedSnackbar />
+        <PositionedSnackbar_1 />
+        <hr />
+        <br/>
           <Container className={classes.cardGrid} maxWidth="lg">
+          
+       
             <Grid container spacing={3}>
               {dashboardStats.map((paper) => (
                 <Grid item key={paper.title} xs={6} sm={6} >
@@ -84,9 +92,7 @@ export default function Home() {
             </center>
           </Container>
         </main>
-        <hr />
-
-        <PositionedSnackbar />
+       
 
       </Container>
       <br />

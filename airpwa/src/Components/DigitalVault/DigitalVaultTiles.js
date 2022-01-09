@@ -186,6 +186,20 @@ export default function DigitalVaultTiles() {
                   </Typography>
 
                   <CardActions>
+                  <Button
+                      variant="outlined"
+                      size="small"
+                      color="primary"
+                      component="label"
+                      align="center"
+                      fullWidth
+                    >
+                      <input
+    type="file"
+    hidden
+  />
+                     <b>Upload Now</b> 
+                    </Button>
                     <Button
                       variant="outlined"
                       size="small"
@@ -200,18 +214,10 @@ export default function DigitalVaultTiles() {
                         // speak({ text: card.readmore,rate : 0.8})
                       }}
                     >
-                      View More
+                      Additional Details
                     </Button>
 
-                    <Button
-                      variant="outlined"
-                      size="small"
-                      color="primary"
-                      align="center"
-                      fullWidth
-                    >
-                      Verify now
-                    </Button>
+                    
                   </CardActions>
                 </CardContent>
               </Card>
@@ -245,7 +251,7 @@ export default function DigitalVaultTiles() {
               {/* {localStorage.getItem("f_readmore")}
                     <br /> <br /> */}
               <center>
-                <img alt="fitness tip" src={localStorage.getItem("f_image")} />
+                <img alt="fitness tip" height="300px" width= "400px" src={localStorage.getItem("f_image")} />
               </center>
             </DialogContentText>
           </DialogContent>
