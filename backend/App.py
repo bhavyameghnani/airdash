@@ -9,6 +9,8 @@ from PIL import Image, ImageDraw
 from azure.cognitiveservices.vision.face import FaceClient
 from msrest.authentication import CognitiveServicesCredentials
 from azure.cognitiveservices.vision.face.models import TrainingStatusType, Person
+from azure.readData import *
+from azure.writeData import *
 
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -81,6 +83,13 @@ def verifyFaceID(img, PERSON_GROUP_ID):
         else:
             print('No person identified for face ID {} in {}.'.format(person.face_id, os.path.basename(image.name)))
             return False
+
+@app.route('/writeToLedger')
+@cross_origin(support_credentials=True)
+def writeDataToLedger():
+    writeToLedger()
+    print('Data uploaded successfully!')
+    return True
 
     
 app.run(port=5000, debug=True)
